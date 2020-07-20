@@ -18,4 +18,4 @@ How to use:
 
 7.Go to Collections---->Tambola.
 
-8.According to the questionaire present in file "questionaire.docx" hit the API's.
+8.According to the questionaire present in file "Backend Development Task.pdf" hit the API's.
