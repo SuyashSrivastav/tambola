@@ -19,3 +19,7 @@ How to use:
 7.Go to Collections---->Tambola.
 
 8.According to the questionaire present in file "Backend Development Task.pdf" hit the API's.
+
+9.The first API /api/game/create gives back game_id.
+
+10.Replace the request body with this game_id in other API's.
