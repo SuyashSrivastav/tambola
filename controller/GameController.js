@@ -11,7 +11,7 @@ const createGame = async (req, res, next) => {
     let errMsg = "error";
     let errCode = 404;
 
-    let name = req.body.name ? req.body.name : "Game" + (new Date()).toDateString()
+    let name = req.body.name ? req.body.name : "Game : " + (new Date()).toString().substring(0, 21)
     let start_date = req.body.start_date ? req.body.start_date : new Date()
 
     let playerIdArray = await playerService.getPlayerIdArray({ is_active: true }).catch(e => next(e))
@@ -22,7 +22,8 @@ const createGame = async (req, res, next) => {
             name: name,
             start_date: start_date,
             players_joined: [],
-            draw_sequence: sequence
+            draw_sequence: sequence,
+            created_at: new Date()
         }).catch(e => next(e))
 
         if (gamecreated && JSON.stringify(gamecreated) !== "{}") {
