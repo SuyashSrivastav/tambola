@@ -36,10 +36,10 @@ const create = async (TicketObj) => new Promise((resolve, reject) => {
         .catch(e => reject(e));
 });
 
+
 const createMany = async (gameObj) =>
     new Promise((resolve, reject) => {
-        Game.insertMany(gameObj, (err, count) =>
-            err ? reject(err) : resolve(count))
+        Ticket.insertMany(gameObj).then(ticket => resolve(ticket)).catch(err => reject(err))
     });
 
 const search = async (where) => new Promise((resolve, reject) => {
