@@ -9,7 +9,7 @@
   "author": "Suyash",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "mongoose": "^5.9.25",
     "nodemon": "^2.0.4",
     "tambola": "^3.0.3",
